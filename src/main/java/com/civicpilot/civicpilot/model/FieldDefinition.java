@@ -28,4 +28,11 @@ public class FieldDefinition {
     // Only for CHOICE fields, values separated by |, e.g. "urban|rural"
     @Column(name = "allowed_values", columnDefinition = "text")
     private String allowedValues;
+
+    // Only for NUMBER fields; null means no limit
+    @Column(name = "min_value")
+    private Double minValue;
+
+    @Column(name = "max_value")
+    private Double maxValue;
 }
